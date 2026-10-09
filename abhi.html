@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JASHWANTHREDDY| CSE AI & ML Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #1f2937;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 8%;
+
+            background: #111827;
+            color: white;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #60a5fa;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* HOME */
+
+        .home {
+            min-height: 92vh;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 60px 8%;
+
+            background: linear-gradient(
+                135deg,
+                #dbeafe,
+                #f8fafc
+            );
+        }
+
+        .home-text {
+            max-width: 650px;
+        }
+
+        .home-text h4 {
+            font-size: 20px;
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+        .home-text h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .home-text h1 span {
+            color: #2563eb;
+        }
+
+        .home-text h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #374151;
+        }
+
+        .home-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 13px 25px;
+
+            background: #2563eb;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            margin-right: 10px;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+        }
+
+        /* PROFILE */
+
+        .profile {
+            width: 290px;
+            height: 290px;
+
+            border-radius: 50%;
+
+            background: #2563eb;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 100px;
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        /* COMMON SECTIONS */
+
+        section {
+            padding: 75px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+
+            font-size: 36px;
+
+            margin-bottom: 45px;
+        }
+
+        .section-title span {
+            color: #2563eb;
+        }
+
+        /* ABOUT */
+
+        .about {
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+        }
+
+        /* OBJECTIVE */
+
+        .objective-box {
+            max-width: 900px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+            text-align: center;
+
+            line-height: 1.8;
+
+            font-size: 18px;
+        }
+
+        /* EDUCATION */
+
+        .education-card {
+            max-width: 750px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .education-card h3 {
+            color: #2563eb;
+
+            margin-bottom: 15px;
+        }
+
+        .education-card p {
+            margin: 9px 0;
+        }
+
+        /* SKILLS */
+
+        .skills-container {
+            display: grid;
+
+            grid-template-columns:
+            repeat(auto-fit, minmax(180px, 1fr));
+
+            gap: 20px;
+        }
+
+        .skill {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            font-weight: bold;
+
+            font-size: 17px;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-8px);
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+
+            grid-template-columns:
+            repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+
+            padding: 28px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            margin-top: 15px;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            color: #4b5563;
+        }
+
+        /* CERTIFICATIONS */
+
+        .certificates {
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+        .certificate {
+            background: white;
+
+            padding: 20px;
+
+            margin-bottom: 15px;
+
+            border-left: 5px solid #2563eb;
+
+            border-radius: 8px;
+
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 15px;
+
+            font-size: 18px;
+        }
+
+        .contact a {
+            color: #2563eb;
+
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111827;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            line-height: 1.8;
+        }
+
+        /* MOBILE */
+
+        @media(max-width: 768px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                margin: 5px;
+
+                font-size: 13px;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+
+                text-align: center;
+
+                gap: 40px;
+            }
+
+            .home-text h1 {
+                font-size: 40px;
+            }
+
+            .home-text h2 {
+                font-size: 22px;
+            }
+
+            .profile {
+                width: 200px;
+                height: 200px;
+
+                font-size: 65px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header>
+
+        <div class="logo">
+            Jashwanthreddy<span>.</span>
+        </div>
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#education">Education</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#certificates">Certificates</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+    <!-- HOME -->
+
+    <section class="home" id="home">
+
+        <div class="home-text">
+
+            <h4>Hello, I'm</h4>
+
+            <h1>
+                <span>jashwanthreddy</span>
+            </h1>
+
+            <h2>
+                CSE (AI & ML) Engineering Student
+            </h2>
+
+            <p>
+                A passionate Computer Science Engineering student
+                specializing in Artificial Intelligence and Machine Learning.
+                I am a fresher who loves programming, problem solving,
+                web development and exploring intelligent technologies.
+            </p>
+
+            <a href="#projects" class="btn">
+                View My Projects
+            </a>
+
+            <a href="#contact" class="btn">
+                Contact Me
+            </a>
+
+        </div>
+
+        <div class="profile">
+            🤖
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <div class="about">
+
+            <p>
+                I am a Computer Science Engineering student
+                specializing in Artificial Intelligence and Machine Learning.
+            </p>
+
+            <p>
+                As a fresher, I am developing my skills in Python,
+                programming, data structures, machine learning,
+                web development and problem solving.
+            </p>
+
+            <p>
+                I enjoy creating academic projects that combine
+                software development with AI and ML concepts.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CAREER OBJECTIVE -->
+
+    <section>
+
+        <h2 class="section-title">
+            Career <span>Objective</span>
+        </h2>
+
+        <div class="objective-box">
+
+            <p>
+                To start my career in the field of Computer Science,
+                Artificial Intelligence and Machine Learning where I can
+                apply my technical knowledge, learn new technologies,
+                solve real-world problems and contribute to innovative
+                software solutions.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <h2 class="section-title">
+            My <span>Education</span>
+        </h2>
+
+        <div class="education-card">
+
+            <h3>
+                B.Tech – Computer Science Engineering
+                (Artificial Intelligence & Machine Learning)
+            </h3>
+
+            <p>
+                <strong>College:</strong>
+                SANDIP UNIVESITY
+            </p>
+
+            <p>
+                <strong>Branch:</strong>
+                CSE – Artificial Intelligence & Machine Learning
+            </p>
+
+            <p>
+                <strong>Duration:</strong>
+                2024 – 2028
+            </p>
+
+            <p>
+                <strong>Status:</strong>
+                Currently Pursuing
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2 class="section-title">
+            Technical <span>Skills</span>
+        </h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                🐍 Python
+            </div>
+
+            <div class="skill">
+                💻 C Programming
+            </div>
+
+            <div class="skill">
+                🌐 HTML
+            </div>
+
+            <div class="skill">
+                🎨 CSS
+            </div>
+
+            <div class="skill">
+                ⚡ JavaScript
+            </div>
+
+            <div class="skill">
+                🤖 Machine Learning
+            </div>
+
+            <div class="skill">
+                🧠 Artificial Intelligence
+            </div>
+
+            <div class="skill">
+                📊 Data Structures
+            </div>
+
+            <div class="skill">
+                🗄️ SQL
+            </div>
+
+            <div class="skill">
+                📈 Data Analysis
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2 class="section-title">
+            My <span>Projects</span>
+        </h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+
+                <h3>
+                    🤖 Student Feedback Sentiment Analysis
+                </h3>
+
+                <p>
+                    An AI/ML project that analyzes student feedback
+                    and identifies whether the feedback expresses
+                    positive, negative or neutral sentiment.
+                </p>
+
+                <div class="project-tech">
+                    Python | NLP | Machine Learning
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>
+                    🗑️ Smart Dustbin
+                </h3>
+
+                <p>
+                    A smart waste-management project using sensors
+                    to detect the dustbin level and improve waste
+                    collection efficiency.
+                </p>
+
+                <div class="project-tech">
+                    IoT | Sensors | Arduino
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>
+                    🏥 Hospital Management System
+                </h3>
+
+                <p>
+                    A software project designed to manage patient
+                    information, appointments and hospital records
+                    using programming and data structures.
+                </p>
+
+                <div class="project-tech">
+                    Python | Data Structures
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>
+                    🌐 Personal Portfolio Website
+                </h3>
+
+                <p>
+                    A responsive personal portfolio website created
+                    to showcase my education, technical skills,
+                    projects and achievements.
+                </p>
+
+                <div class="project-tech">
+                    HTML | CSS | JavaScript
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CERTIFICATES -->
+
+    <section id="certificates">
+
+        <h2 class="section-title">
+            Certificates & <span>Achievements</span>
+        </h2>
+
+        <div class="certificates">
+
+            <div class="certificate">
+                📜 Python Programming Certification
+            </div>
+
+            <div class="certificate">
+                📜 Artificial Intelligence & Machine Learning Workshop
+            </div>
+
+            <div class="certificate">
+                📜 Web Development Certification
+            </div>
+
+            <div class="certificate">
+                🏆 Participated in Technical Events and Workshops
+            </div>
+
+            <div class="certificate">
+                💡 Completed Academic Mini Projects
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2 class="section-title">
+            Contact <span>Me</span>
+        </h2>
+
+        <div class="contact">
+
+            <p>
+                📧 Email:
+                <a href="mailto:yourmail@gmail.com">
+                    abhiporeddy07@gmail.com
+                </a>
+            </p>
+
+            <p>
+                📱 Phone:
+                +91 7095552010
+            </p>
+
+            <p>
+                💼 LinkedIn:
+                <a href="#">
+                    https://www.linkedin.com/public-profile/settings/
+                </a>
+            </p>
+
+            <p>
+                🐙 GitHub:
+                <a href="#">
+                    https://github.com/poreddyjashwanthreddy7
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 jashwanthreddy| CSE (AI & ML) Engineering Student
+        </p>
+
+        <p>
+            Designed with ❤️ using HTML & CSS
+        </p>
+
+    </footer>
+
+</body>
+</html>
